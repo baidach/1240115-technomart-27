@@ -224,24 +224,24 @@
         <img src="img/map.jpg" weight="300" height="158" alt="Карта как проехать">    
         <button type="button">Заблудились? Напишите нам!</button>
       </section>
-      <div class="visually-hidden">
+      <div>
         <img src="img/map_big.jpg" alt="Большая карта">
-        <button></button>
+        <button>Х</button>
       </div>
-      <div class="visually-hidden">
-        <button></button>
-        <form action="post">
+      <div>
+        <button>Х</button>
+        <form action="" method="post">
           <div>
-            <label>Ваше имя:</label>
-            <input type="text" name="user-name" placeholder="Имя Фамилия">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
           </div>
           <div>
-            <label>Ваш e-mail:</label>
-            <input type="email" name="user-email" placeholder="email@example.com">
+            <label for="user-email">Ваш e-mail:</label>
+            <input type="email" id="user-email" name="user-email" placeholder="email@example.com">
           </div>
           <div>
-            <label>Текст письма:</label>
-            <textarea rows="5" name="user-text">
+            <label for="user-text">Текст письма:</label>
+            <textarea rows="5" id="user-text" name="user-text">
               В свободной форме
             </textarea>
           </div>
