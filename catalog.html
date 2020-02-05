@@ -9,7 +9,10 @@
     <header>
       <div>
         <a href="index.html"> <img src="img/logo-technomart.svg" weight="108" height="18" alt="Интернет-магазин Техномарт"> </a>
-        <p>Поиск:</p>
+        <form action="" method="post">
+          <input type="search" name="search" placeholder="Поиск:">
+          <button>Search</button>
+        </form>
         <ul>
           <li><a href="#">Закладки: 0</a></li>
           <li><a href="#">Корзина: 10</a></li>
@@ -25,7 +28,7 @@
         <div>
           <div>
             <a href="#">Равшан Джамшутович</a>
-            <a href="#" ></a> <!-- Кнопка ВЫХОД-->
+            <a href="#">Выход</a>
           </div>
           <ul>
             <li><a href="#">Мои заказы</a></li>
@@ -47,7 +50,7 @@
     </header>
     <main>
       <ul>
-        <li><a href="index.html"></li> <!-- Иконка "Домой" -->
+        <li><a href="index.html">Домой</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li>Перфораторы</li>
@@ -55,36 +58,62 @@
       <section>
         <h1>Перфораторы</h1>
         <div>
-          <!-- Фильтры товаров -->
-          <div>Фильтр:</div>
-          <div>
-            <h2>Цена:</h2>
-            <!-- Сортировка по цене -->
+          <form action="">
+            <!-- Фильтры товаров -->
+            <div>Фильтр:</div>
             <div>
-              
+              <h2>Цена:</h2>
+              <input type="range" min="1" max="40000" step="1">
+              <div>
+                <input type="text">
+                <p> — </p>
+                <input type="text">
+              </div>
             </div>
             <div>
-
+              <h2>Производители:</h2>
+              <ul>
+                <li>
+                  <input type="checkbox" name="product-group-manufacturers" value="bosh" id="bosh">
+                  <label for="bosh">BOSCH</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="product-group-manufacturers" value="interscol" id="interscol">
+                  <label for="interscol">ИНТЕРСКОЛ</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="product-group-manufacturers" value="makita" id="makita">
+                  <label for="makita">MAKIta</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="product-group-manufacturers" value="dewalt" id="dewalt">
+                  <label for="dewalt">Dewalt</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="product-group-manufacturers" value="hitachi" id="hitachi">
+                  <label for="hitachi">Hitachi</label>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div>
-            <h2>Производители:</h2>
-            <ul>
-              <li>BOSCH</li>
-              <li>ИНТЕРСКОЛ</li>
-              <li>MAKIta</li>
-              <li>Dewalt</li>
-              <li>Hitachi</li>
-            </ul>
-          </div>
-          <div>
-            <h2>Питание:</h2>
-            <ul>
-              <li>Аккумуляторные</li>
-              <li>Сетевые</li>
-            </ul>
-          </div>
-          <button>Показать</button>
+            <div>
+              <h2>Питание:</h2>
+              <ul>
+                <li>
+                  <input type="radio" name="product-group-power" value="rechargeable" id="rechargeable">
+                  <label for="rechargeable">
+                    Аккумуляторные
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="product-group-power" value="power" id="power">
+                  <label for="power">
+                    Сетевые
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button type="submit">Показать</button>
+          </form>
         </div>
         <div>
           <div>
