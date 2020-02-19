@@ -19,7 +19,7 @@ body {
     
 }
 
-.hav-top-menu>div {
+.hav-top-menu-container {
     width: 940px;
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@ body {
     border-bottom: 5px solid #b52933;
 }
 
-.hav-top-menu ul {
+.hav-top-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@ body {
     font-weight: 400;
 }
 
-.hav-top-menu ul li {
+.hav-top-menu-list li {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@ body {
     height: 42px;
 }
 
-.hav-top-menu ul li:first-child::before {
+.hav-top-menu-list li:first-child::before {
     content: url(../img/icon-bookmark.svg);
     margin-right: 15px;
     width: 14px;
@@ -62,11 +62,11 @@ body {
 
 }
 
-.hav-top-menu ul li:last-child {
+.hav-top-menu-list li:last-child {
     background-color: #ee3643;
 }
 
-.hav-top-menu ul li:last-child::before {
+.hav-top-menu-list li:last-child::before {
     content: url(../img/icon-cart.svg);
     margin-right: 15px;
     width: 15px;
@@ -155,8 +155,8 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    height: 158px;
     align-items: center;
+    margin-top: 20px;
 }
 
 .hav-top-center > p {
@@ -165,6 +165,7 @@ body {
     font-size: 16px;
     line-height: 23px;
     padding-left: 50px;
+    max-width: 201px; /* но тогда "и" подвесает в воздуже, по моему так не хорошо делать =)) */
 }
 
 .hav-top-center-phone {
@@ -251,6 +252,7 @@ body {
     height: 55px;
     background-color: #32425c;
     border-bottom: 5px solid #293449;
+    margin-top: 20px;
 }
 
 .hav-top nav ul {
@@ -566,6 +568,7 @@ main {
 
 .popular-items-products-item p {
     text-align: center;
+    min-height: 19px;
 }
 
 .old-price {
@@ -812,4 +815,152 @@ main {
     font-size: 16px;
     line-height: 18px;
     
+}
+
+.catalog-page {
+    margin-top: 20px;
+}
+
+.catalog-content {
+
+    width: 940px;
+    margin: 0 auto;
+}
+
+.bread-crumbs {
+    padding: 0;
+    margin: 0;
+    margin-top: 24px;
+}
+
+.bread-crumbs li {
+    display: inline-block;
+    list-style: none;
+}
+
+.bread-crumbs li:first-child a{
+    font-size: 0;
+}
+
+.bread-crumbs li:first-child::before
+{
+    content: url("../img/icon-home.svg");
+    margin-right: 15px;
+    width: 14px;
+    height: 12px;
+}
+
+.bread-crumbs-items a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13pxt;
+    line-height: 18px;
+}
+
+.bread-crumbs-items {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13pxt;
+    line-height: 18px;
+    margin-left: 10px;
+}
+
+.bread-crumbs-items::before {
+    content: url("../img/icon-right-small.svg");
+    margin-right: 15px;
+    width: 7px;
+    height: 12px;   
+}
+
+.catalog-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.catalog-list {
+    width: 700px;
+}
+
+.catalog-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-list-items li {
+    margin-top: 20px;
+}
+
+.soft-second {
+    background-color: #f7f3ec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.soft-second-list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.soft-second > p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.soft-second-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-left: 60px;
+}
+
+.catalog-sort-buttons {
+    display: inline-block;
+}
+
+.soft-second-list-item button {
+    background-color: transparent;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #acaaa5;
+    padding: 0;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #ee3643;
+}
+
+.soft-second-list-item-active button{
+    color: #ee3643;
+    border-bottom: none;
+}
+
+.catalog-header {
+    background-color: #f2f6f8;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.catalog-header h1 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #32425c;
 }
