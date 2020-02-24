@@ -69,7 +69,7 @@
         <div class="slider-page">
           <div class="main-slider">
             
-            <div>
+            <div id="slider-1" class="slider-1">
               <div class="slider-info">
                 <h1>Дрели</h1>
                 <p>Соседям на радость!</p>
@@ -80,7 +80,7 @@
               <img src="img/slider2.jpg" width="620" height="266" alt="Дрели - соседям на радость!">
               
             </div>
-            <div class="hide">
+            <div id="slider-2" class="slider-2">
               <div class="slider-info">
                 <h1>Перфораторы</h1>
                 <p>Настоящие мужские игрушки</p>
@@ -91,10 +91,10 @@
               <img src="img/slider1.jpg" width="620" height="266" alt="Дрели - соседям на радость!">
 
             </div>
-            <!--<div>
-              <button>Вперед</button>
+            <div class="slider-btn hide">
+              <button class="slider-btn-forvard">Вперед</button>
               <button>Назад</button>
-            </div>-->
+            </div>
           </div>
           <ul class="promo-2">
             <li class="promo-2-item promo-item">
@@ -120,9 +120,11 @@
               <a href="#">
                   <img src="img/perforator__1.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 9000">
               </a>
-              <div class="hide">
-                  <button>Купить</button>
-                  <button>В закладки</button>
+              <div class="popular-items-action hide">
+                <div class="popular-items-action-center">
+                  <button class="popular-items-action-buy">Купить</button>
+                  <button class="popular-items-action-bookmarks">В закладки</button>
+                </div>
               </div>
             </div>
             <h3>
@@ -139,9 +141,11 @@
               <a href="#">
                   <img src="img/perforator__2.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 3000">
               </a>
-              <div class="hide">
-                  <button>Купить</button>
-                  <button>В закладки</button>
+              <div class="popular-items-action hide">
+                <div class="popular-items-action-center">
+                  <button class="popular-items-action-buy">Купить</button>
+                  <button class="popular-items-action-bookmarks">В закладки</button>
+                </div>
               </div>
             </div>
             <h3>
@@ -158,9 +162,11 @@
               <a href="#">
                   <img src="img/perforator__3.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 6000">
               </a>
-              <div class="hide">
-                  <button>Купить</button>
-                  <button>В закладки</button>
+              <div class="popular-items-action hide">
+                <div class="popular-items-action-center">
+                  <button class="popular-items-action-buy">Купить</button>
+                  <button class="popular-items-action-bookmarks">В закладки</button>
+                </div>
               </div>
             </div>
             <h3>
@@ -177,9 +183,11 @@
               <a href="#">
                   <img src="img/perforator__4.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 2000">
               </a>
-              <div class="hide">
-                  <button>Купить</button>
-                  <button>В закладки</button>
+              <div class="popular-items-action hide">
+                <div class="popular-items-action-center">
+                  <button class="popular-items-action-buy">Купить</button>
+                  <button class="popular-items-action-bookmarks">В закладки</button>
+                </div>
               </div>
             </div>
             <h3>
@@ -213,7 +221,7 @@
       </section>
         
       <section class="servises content-mragin">
-        <div class="content servises-content">
+        <div id="servises-content-div" class="content servises-content-delivery">
           <h2>Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="servises-content-items-flex">
@@ -236,18 +244,14 @@
               поднимая его на ваш этаж!</p>
           </div>
           <div id="listelem2" class="servises-content-description hide">
-            <h3>Доставка 2</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо <br>
-              к вашему подъезду совершенно бесплатно! <br>
-              Ведь мы неплохо заработаем, <br>
-              поднимая его на ваш этаж!</p>
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
           </div>
           <div id="listelem3" class="servises-content-description hide">
-            <h3>Доставка 3</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо <br>
-              к вашему подъезду совершенно бесплатно! <br>
-              Ведь мы неплохо заработаем, <br>
-              поднимая его на ваш этаж!</p>
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще! <br>
+              Кредитные консультанты придут вам на помощь.</p>
+              <a href="#" class="button-red send-request-btn">Отправить заявку</a>
           </div>
         </div>
       </div>
@@ -270,45 +274,45 @@
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами,<br>
                 заехав в наш офис:</p>
-            <img src="img/map.jpg" width="300" height="158" alt="Карта как проехать">    
-            <button type="button" onclick="document.getElementById('popapp-map').classList.remove('hide');">Заблудились? Напишите нам!</button>
+            <img src="img/map.jpg" width="300" height="158" alt="Карта как проехать" onclick="document.getElementById('popapp-map').classList.remove('hide');">    
+            <button type="button" onclick="document.getElementById('popapp-contact').classList.remove('hide');">Заблудились? Напишите нам!</button>
           </section>
         </div>
         <div id="popapp-map" class="popapp-map hide">
           <img src="img/map_big.jpg" alt="Большая карта">
-          <button onclick="document.getElementById('popapp-map').classList.add('hide');"></button>
+          <button class="pop-app-close-btn" onclick="document.getElementById('popapp-map').classList.add('hide');"></button>
+        </div>
+        <div id="popapp-contact" class="popapp-contact hide">
+          <button class="pop-app-close-btn" onclick="document.getElementById('popapp-contact').classList.add('hide');"></button>
+          <form action="" method="post">
+            <div class="pop-app-content">
+              <div class="popapp-half">
+                <label for="user-name">Ваше имя:</label>
+                <input class="pop-app-input" type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+              </div>
+              <div class="popapp-half">
+                <label for="user-email">Ваш e-mail:</label>
+                <input class="pop-app-input" type="email" id="user-email" name="user-email" placeholder="email@example.com">
+              </div>
+              <div  class="popapp-not-half">
+                <label for="user-text">Текст письма:</label>
+                <textarea rows="5" id="user-text" name="user-text" placeholder="В свободной форме">
+                  
+                </textarea>
+              </div>
+            </div>
+            <div class="btn-area">
+              <button>Отправить</button>
+            </div>
+          </form>
         </div>
       </div>
-      
-      <div class="hide">
-        <button>Х</button>
-        <form action="" method="post">
-          <div>
-            <label for="user-name">Ваше имя:</label>
-            <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
-          </div>
-          <div>
-            <label for="user-email">Ваш e-mail:</label>
-            <input type="email" id="user-email" name="user-email" placeholder="email@example.com">
-          </div>
-          <div>
-            <label for="user-text">Текст письма:</label>
-            <textarea rows="5" id="user-text" name="user-text">
-              В свободной форме
-            </textarea>
-          </div>
-          <div>
-            <button>Отправить</button>
-          </div>
-        </form>
-      </div>
-
     </main>
     <footer class="footer">
       <div class="content-footer">
         <div class="footer-flex">
           <div class="footer-contacts">
-            <a href="index.html" class="top-logo footer-logo">
+            <a href="index.html" class="footer-logo">
               <img src="img/logo-technomart.svg" width="136" height="21" alt="Логотип">
             </a>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
@@ -356,6 +360,10 @@
         document.getElementById("list-titl-elem-1").classList.remove("servises-content-items");
         document.getElementById("list-titl-elem-2").classList.remove("servises-content-items");
         document.getElementById("list-titl-elem-3").classList.remove("servises-content-items");
+
+        document.getElementById("servises-content-div").classList.remove("servises-content-delivery");
+        document.getElementById("servises-content-div").classList.remove("servises-content-garanty");
+        document.getElementById("servises-content-div").classList.remove("servises-content-credit");
       }
       function showhide1()
       {
@@ -368,6 +376,7 @@
         document.getElementById("list-titl-elem-1").classList.add("servises-content-items-active");
         document.getElementById("list-titl-elem-2").classList.add("servises-content-items");
         document.getElementById("list-titl-elem-3").classList.add("servises-content-items");
+        document.getElementById("servises-content-div").classList.add("servises-content-delivery");
       }
 
       function showhide2()
@@ -381,6 +390,7 @@
         document.getElementById("list-titl-elem-1").classList.add("servises-content-items");
         document.getElementById("list-titl-elem-2").classList.add("servises-content-items-active");
         document.getElementById("list-titl-elem-3").classList.add("servises-content-items");
+        document.getElementById("servises-content-div").classList.add("servises-content-garanty");
       }
 
       function showhide3()
@@ -394,6 +404,7 @@
         document.getElementById("list-titl-elem-1").classList.add("servises-content-items");
         document.getElementById("list-titl-elem-2").classList.add("servises-content-items");
         document.getElementById("list-titl-elem-3").classList.add("servises-content-items-active");
+        document.getElementById("servises-content-div").classList.add("servises-content-credit");
       }
 
       
