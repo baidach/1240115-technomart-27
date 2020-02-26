@@ -5,7 +5,8 @@
     <title>Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">  
   </head>
   <body>
     <header class="hav-top">
@@ -14,8 +15,8 @@
           <a href="index.html" class="top-logo">
             <img src="img/logo-technomart.svg" width="108" height="18" alt="Интернет-магазин Техномарт">
           </a>
-          <form action="" method="post">
-            <input type="search" name="search" placeholder="Поиск:">
+          <form action="#" method="post">
+            <input class="header-search" type="search" name="search" placeholder="Поиск:">
             <button type="submit">Search</button>
           </form>
           <div class="top-menu-right">
@@ -179,7 +180,7 @@
             <p class="new-price">25500 Р.</p>
           </li>
           <li class="popular-items-products-item">
-            <div>
+            <div class="new-mark">
               <a href="#">
                   <img src="img/perforator__4.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 2000">
               </a>
@@ -275,7 +276,7 @@
             <p>Вы можете забрать товар сами,<br>
                 заехав в наш офис:</p>
             <img src="img/map.jpg" width="300" height="158" alt="Карта как проехать" onclick="document.getElementById('popapp-map').classList.remove('hide');">    
-            <button type="button" onclick="document.getElementById('popapp-contact').classList.remove('hide');">Заблудились? Напишите нам!</button>
+            <button class="button-red" type="button" onclick="document.getElementById('popapp-contact').classList.remove('hide');">Заблудились? Напишите нам!</button>
           </section>
         </div>
         <div id="popapp-map" class="popapp-map hide">
@@ -284,7 +285,7 @@
         </div>
         <div id="popapp-contact" class="popapp-contact hide">
           <button class="pop-app-close-btn" onclick="document.getElementById('popapp-contact').classList.add('hide');"></button>
-          <form action="" method="post">
+          <form action="#" method="post">
             <div class="pop-app-content">
               <div class="popapp-half">
                 <label for="user-name">Ваше имя:</label>
@@ -302,7 +303,7 @@
               </div>
             </div>
             <div class="btn-area">
-              <button>Отправить</button>
+              <button class="button-red">Отправить</button>
             </div>
           </form>
         </div>
@@ -349,7 +350,7 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript">
+    <script>
 
       function clearmeplz()
       {

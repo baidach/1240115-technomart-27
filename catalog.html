@@ -5,7 +5,8 @@
     <title>Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">  
   </head>
   <body>
     <header class="hav-top">
@@ -14,8 +15,8 @@
           <a href="index.html" class="top-logo">
             <img src="img/logo-technomart.svg" width="108" height="18" alt="Интернет-магазин Техномарт">
           </a>
-          <form action="" method="post">
-            <input type="search" name="search" placeholder="Поиск:">
+          <form action="#" method="post">
+            <input class="header-search" type="search" name="search" placeholder="Поиск:">
             <button type="submit">Search</button>
           </form>
           <div class="top-menu-right">
@@ -66,18 +67,24 @@
       <section class="catalog-content catalog-page">
         <h1 class="catalog-header">Перфораторы</h1>
         <div class="catalog-flex">
-        <form action="">
+        <form action="#">
           <!-- Фильтры товаров -->
           <div class="filter-header">Фильтр:</div>
           <div class="filter">
             <h2>Цена:</h2>
             <div class="filter-range">
-              <input type="range" min="1" max="40000" step="1">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
             </div>
             <div class="filter-range-result">
-              <input type="text">
+              <input type="text" value="0">
               <p> — </p>
-              <input type="text">
+              <input type="text" value="30000">
             </div>
           </div>
           <div class="filter">
@@ -85,23 +92,23 @@
             <ul class="filter-list">
               <li>
                 <input type="checkbox" name="product-group-manufacturers" value="bosh" id="bosh">
-                <label for="bosh">BOSCH</label>
+                <label for="bosh" class="checkbox-lbl">BOSCH</label>
               </li>
               <li>
                 <input type="checkbox" name="product-group-manufacturers" value="interscol" id="interscol">
-                <label for="interscol">ИНТЕРСКОЛ</label>
+                <label for="interscol" class="checkbox-lbl">ИНТЕРСКОЛ</label>
               </li>
               <li>
                 <input type="checkbox" name="product-group-manufacturers" value="makita" id="makita">
-                <label for="makita">MAKIta</label>
+                <label for="makita" class="checkbox-lbl">MAKIta</label>
               </li>
               <li>
                 <input type="checkbox" name="product-group-manufacturers" value="dewalt" id="dewalt">
-                <label for="dewalt">Dewalt</label>
+                <label for="dewalt" class="checkbox-lbl">Dewalt</label>
               </li>
               <li>
                 <input type="checkbox" name="product-group-manufacturers" value="hitachi" id="hitachi">
-                <label for="hitachi">Hitachi</label>
+                <label for="hitachi" class="checkbox-lbl">Hitachi</label>
               </li>
             </ul>
           </div>
@@ -110,13 +117,13 @@
             <ul class="filter-list">
               <li>
                 <input type="radio" name="product-group-power" value="rechargeable" id="rechargeable">
-                <label for="rechargeable">
+                <label for="rechargeable" class="checkbox-radio">
                   Аккумуляторные
                 </label>
               </li>
               <li>
                 <input type="radio" name="product-group-power" value="power" id="power">
-                <label for="power">
+                <label for="power" class="checkbox-radio">
                   Сетевые
                 </label>
               </li>
@@ -127,15 +134,15 @@
         <div class="catalog-list">
           <div class="soft-second">
             <p>Сортировка:</p>
-            <div>
+            <div class="sort-list">
               <ul class="soft-second-list">
                 <li class="soft-second-list-item soft-second-list-item-active"><button>По цене</button></li>
                 <li class="soft-second-list-item"><button>По типу</button></li>
                 <li class="soft-second-list-item"><button>По функционалу</button></li>
               </ul>
               <div class="catalog-sort-buttons">
-                <button>Up</button>
-                <button>Down</button>
+                <button class="btn-sort-up"></button>
+                <button class="btn-sort-down"></button>
               </div>
             </div>
           </div>
@@ -179,13 +186,15 @@
                 <p class="new-price">25500 Р.</p>
               </li>
               <li class="popular-items-products-item">
-                <a href="#" class="popular-items-image">
-                    <img src="img/perforator__3.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 2000">
-                </a>
-                <div class="popular-items-action hide">
-                  <div class="popular-items-action-center">
-                    <button class="popular-items-action-buy">Купить</button>
-                    <button class="popular-items-action-bookmarks">В закладки</button>
+                <div class="new-mark">
+                  <a href="#" class="popular-items-image">
+                      <img src="img/perforator__3.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 2000">
+                  </a>
+                  <div class="popular-items-action hide">
+                    <div class="popular-items-action-center">
+                      <button class="popular-items-action-buy">Купить</button>
+                      <button class="popular-items-action-bookmarks">В закладки</button>
+                    </div>
                   </div>
                 </div>
                 <h3>
@@ -217,13 +226,15 @@
                 <p class="new-price">15500 Р.</p>
               </li>
               <li class="popular-items-products-item">
-                <a href="#" class="popular-items-image">
-                    <img src="img/perforator__2.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 6000">
-                </a>
-                <div class="popular-items-action hide">
-                  <div class="popular-items-action-center">
-                    <button class="popular-items-action-buy">Купить</button>
-                    <button class="popular-items-action-bookmarks">В закладки</button>
+                <div class="new-mark">
+                  <a href="#" class="popular-items-image">
+                      <img src="img/perforator__2.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 6000">
+                  </a>
+                  <div class="popular-items-action hide">
+                    <div class="popular-items-action-center">
+                      <button class="popular-items-action-buy">Купить</button>
+                      <button class="popular-items-action-bookmarks">В закладки</button>
+                    </div>
                   </div>
                 </div>
                 <h3>
@@ -255,13 +266,15 @@
                 <p class="new-price">12500 Р.</p>
               </li>
               <li class="popular-items-products-item">
-                <a href="#" class="popular-items-image">
-                    <img src="img/perforator__1.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 3000">
-                </a>
-                <div class="popular-items-action hide">
-                  <div class="popular-items-action-center">
-                    <button class="popular-items-action-buy">Купить</button>
-                    <button class="popular-items-action-bookmarks">В закладки</button>
+                <div class="new-mark">
+                  <a href="#" class="popular-items-image">
+                      <img src="img/perforator__1.jpg" width="220" height="169" alt="Перфоратор BOSCH BFG 3000">
+                  </a>
+                  <div class="popular-items-action hide">
+                    <div class="popular-items-action-center">
+                      <button class="popular-items-action-buy">Купить</button>
+                      <button class="popular-items-action-bookmarks">В закладки</button>
+                    </div>
                   </div>
                 </div>
                 <h3>
@@ -383,5 +396,13 @@
           </div>
         </div>
       </footer>
+      <div id="add-basket-popapp" class="add-basket-popapp">
+        <button class="pop-app-close-btn" onclick="document.getElementById('add-basket-popapp').classList.add('hide');"></button>
+        <div class="add-basket-popapp-title">Товар добавлен в корзину!</div>
+        <div class="add-basket-popapp-btns">
+          <button class="button-red checkout-btn">Оформить заказ</button>
+          <button class="continue-shopping-btn">Продолжить покупки</button>
+        </div>
+      </div>
   </body>
 </html>
